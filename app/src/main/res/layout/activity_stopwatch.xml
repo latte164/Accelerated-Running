@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stopwatchLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
+    tools:context="com.lattestudios.william.acceleratedrunning.StopwatchActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/MainStopwatch"
+            android:layout_width="353dp"
+            android:layout_height="82dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textSize="64sp"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/RelativeStopwatch"
+            android:layout_width="353dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MainStopwatch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/StopToggle"
+            android:layout_width="353dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#efaf2f"
+            android:text="Start / Stop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RelativeStopwatch"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="353dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StopToggle"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <Button
+                android:id="@+id/ImportButton"
+                android:layout_width="172dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="4.5dp"
+                android:layout_weight="1"
+                android:background="#efaf2f"
+                android:text="Import Calc. Data"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/paceLabel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ResetButton"
+                app:layout_constraintTop_toBottomOf="@+id/StopToggle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/ResetButton"
+                android:layout_width="172dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="4.5dp"
+                android:layout_weight="1"
+                android:background="#efaf2f"
+                android:text="Clear"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ImportButton"
+                app:layout_constraintRight_toRightOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="353dp"
+            android:layout_height="19dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:id="@+id/linearLayout3"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/distanceLabel"
+                android:layout_width="117dp"
+                android:layout_height="19dp"
+                android:layout_weight="1"
+                android:text="Distance"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/paceLabel"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/paceLabel"
+                android:layout_width="119dp"
+                android:layout_height="19dp"
+                android:layout_weight="1"
+                android:text="Pace"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/distanceLabel"
+                app:layout_constraintRight_toLeftOf="@+id/timeLabel"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/timeLabel"
+                android:layout_width="117dp"
+                android:layout_height="19dp"
+                android:layout_weight="1"
+                android:text="Time"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/paceLabel"
+                app:layout_constraintRight_toRightOf="parent" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="353dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/distanceTextViewStopwatch"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+                <TextView
+                    android:id="@+id/paceTextViewStopwatch"
+                    android:layout_width="119dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="133dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+                <TextView
+                    android:id="@+id/timeTextViewStopwatch"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="251dp"
+                    tools:layout_editor_absoluteY="269dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- <ScrollView
+            android:layout_width="353dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/paceLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.533">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </ScrollView> -->
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        android:fillViewport="true"
+        android:id="@+id/navigationViewStopwatch">
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

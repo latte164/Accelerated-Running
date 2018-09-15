@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_calculator"
+        android:icon="@mipmap/ic_dialpad_black_24dp"
+        android:title="Calculator"></item>
+
+    <item android:id="@+id/nav_stopwatch"
+        android:icon="@mipmap/ic_timer_black_24dp"
+        android:title="Stopwatch"></item>
+
+    <item android:id="@+id/nav_records"
+        android:icon="@mipmap/ic_list_black_24dp"
+        android:title="Records"></item>
+
+    <item android:id="@+id/nav_settings"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Settings"></item>
+</menu>

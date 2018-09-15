@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Accelerated Running</string>
+
+    <string-array name="measurements_array">
+        <item>Kilometers</item>
+        <item>Miles</item>
+    </string-array>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_stopwatch_manager">StopwatchManager</string>
+</resources>
